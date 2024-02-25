@@ -285,9 +285,9 @@ def show_ch_tables():
     coll1=db["channel_details"]
     for ch_data in coll1.find({}):
         ch_list.append(ch_data["channel_infomation"])
-        df=st.dataframe(ch_list)
+    df=st.dataframe(ch_list)
         
-        return df
+    return df
     
 def show_vd_tables():
     vi_list=[]
@@ -296,9 +296,9 @@ def show_vd_tables():
     for vi_data in coll1.find({},{"vedio_information"}):
         for i in range(len(vi_data["vedio_information"])):
             vi_list.append(vi_data['vedio_information'][i])
-            df1=st.dataframe(vi_list)
+    df1=st.dataframe(vi_list)
 
-            return df1
+    return df1
         
 def show_com_tables():
     com_list=[]
@@ -314,14 +314,14 @@ def show_com_tables():
 with st.sidebar:
     st.title(":red[Youtube Data Harvesting and Warehousing]")
 
-Channel_id=st.text_input("Enter The Channel ID","Enter The Channel ID")
+Channel_id=st.text_input("Enter The Channel ID")
 
 if st.button("collect and store data"):
     ch_ids=[]
     db=client["Youtube_data"]
     coll1=db["channel_details"]
     for ch_data in coll1.find({}):
-        ch_ids.append(ch_data["channel_infomation"]["channel_Id"])
+        ch_ids.append(ch_data)
 
     if Channel_id in ch_ids:
         st.success("Channel Details of the given channel id already exists")
