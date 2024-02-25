@@ -1,1 +1,1 @@
-I am new to coding i found this project quite intresting and challanging to first get data from youtube using APIs by catogories of channel,vedios,comments and 
+I am new to coding i found this project quite intresting and challanging to first get data from youtube using APIs by catogories of channel,vedios,comments and upload the date in mongodb and migrate it to my sql was the tougest part to get to konw the columns charactrers to match the data and to show the results in the streamlit application interface and creating a list of 10 questions querys 
