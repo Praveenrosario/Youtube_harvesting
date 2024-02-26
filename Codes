@@ -428,7 +428,8 @@ elif questions=="8. Videos published in the year of 2022":
 
 
 elif questions=="9. Average duration of all videos in each channel?":
-    mycursor.execute("""SELECT cahnnel_id, AVG(Duration) FROM vedios GROUP BY cahnnel_id""")
+    query9="""SELECT cahnnel_id, Duration FROM vedios"""
+    mycursor.execute(query9)
     results = mycursor.fetchall()
     data = {'cahnnel_id': [], 'Duration': []}
     for cahnnel_id, Duration in results:
